@@ -29,6 +29,8 @@ var (
 		&client.Theine[string, string]{},
 		&client.Ristretto[string, string]{},
 		&client.Ccache[string]{},
+		&client.PHULRU[string, string]{},
+		&client.CloudxaasString{},
 	}
 )
 

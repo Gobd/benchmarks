@@ -1,25 +1,35 @@
 goos: darwin
 goarch: arm64
 pkg: github.com/maypok86/benchmarks/throughput
-BenchmarkCache/zipf_otter_reads=100%,writes=0%-8         	285645423	         4.198 ns/op	 238223783 ops/s
-BenchmarkCache/zipf_theine_reads=100%,writes=0%-8        	10803680	       109.7 ns/op	   9118351 ops/s
-BenchmarkCache/zipf_ristretto_reads=100%,writes=0%-8     	51357458	        25.93 ns/op	  38566616 ops/s
-BenchmarkCache/zipf_ccache_reads=100%,writes=0%-8        	23418879	        61.81 ns/op	  16178111 ops/s
-BenchmarkCache/zipf_otter_reads=75%,writes=25%-8         	165591776	         7.223 ns/op	 138439291 ops/s
-BenchmarkCache/zipf_theine_reads=75%,writes=25%-8        	 9750858	       139.6 ns/op	   7164925 ops/s
-BenchmarkCache/zipf_ristretto_reads=75%,writes=25%-8     	22207245	        46.59 ns/op	  21464057 ops/s
-BenchmarkCache/zipf_ccache_reads=75%,writes=25%-8        	16873354	        71.63 ns/op	  13960687 ops/s
-BenchmarkCache/zipf_otter_reads=50%,writes=50%-8         	83452136	        12.26 ns/op	  81547542 ops/s
-BenchmarkCache/zipf_theine_reads=50%,writes=50%-8        	12554828	        91.63 ns/op	  10913333 ops/s
-BenchmarkCache/zipf_ristretto_reads=50%,writes=50%-8     	21768657	        58.37 ns/op	  17131069 ops/s
-BenchmarkCache/zipf_ccache_reads=50%,writes=50%-8        	 7834250	       154.7 ns/op	   6465496 ops/s
-BenchmarkCache/zipf_otter_reads=25%,writes=75%-8         	52542362	        22.92 ns/op	  43630581 ops/s
-BenchmarkCache/zipf_theine_reads=25%,writes=75%-8        	12317804	        94.75 ns/op	  10554138 ops/s
-BenchmarkCache/zipf_ristretto_reads=25%,writes=75%-8     	20005459	        60.82 ns/op	  16442575 ops/s
-BenchmarkCache/zipf_ccache_reads=25%,writes=75%-8        	 6900565	       186.5 ns/op	   5361445 ops/s
-BenchmarkCache/zipf_otter_reads=0%,writes=100%-8         	10417759	       124.0 ns/op	   8062070 ops/s
-BenchmarkCache/zipf_theine_reads=0%,writes=100%-8        	26494842	        43.83 ns/op	  22817214 ops/s
-BenchmarkCache/zipf_ristretto_reads=0%,writes=100%-8     	12168746	       101.5 ns/op	   9854832 ops/s
-BenchmarkCache/zipf_ccache_reads=0%,writes=100%-8        	 2369119	       553.9 ns/op	   1805524 ops/s
+BenchmarkCache/zipf_otter_reads=100%,writes=0%-8         	209122777	         5.514 ns/op	 181371921 ops/s
+BenchmarkCache/zipf_theine_reads=100%,writes=0%-8        	10232828	       115.9 ns/op	   8629642 ops/s
+BenchmarkCache/zipf_ristretto_reads=100%,writes=0%-8     	38229901	        26.51 ns/op	  37717456 ops/s
+BenchmarkCache/zipf_ccache_reads=100%,writes=0%-8        	21894813	        63.78 ns/op	  15679809 ops/s
+BenchmarkCache/zipf_phuslu_reads=100%,writes=0%-8        	31644492	        39.24 ns/op	  25482590 ops/s
+BenchmarkCache/zipf_cloudxaas_reads=100%,writes=0%-8     	43697805	        32.10 ns/op	  31152957 ops/s
+BenchmarkCache/zipf_otter_reads=75%,writes=25%-8         	161190255	         7.646 ns/op	 130783133 ops/s
+BenchmarkCache/zipf_theine_reads=75%,writes=25%-8        	 7825729	       141.9 ns/op	   7044867 ops/s
+BenchmarkCache/zipf_ristretto_reads=75%,writes=25%-8     	25422000	        51.21 ns/op	  19526717 ops/s
+BenchmarkCache/zipf_ccache_reads=75%,writes=25%-8        	13530489	        84.30 ns/op	  11862593 ops/s
+BenchmarkCache/zipf_phuslu_reads=75%,writes=25%-8        	32337314	        36.88 ns/op	  27114883 ops/s
+BenchmarkCache/zipf_cloudxaas_reads=75%,writes=25%-8     	45279601	        31.29 ns/op	  31959355 ops/s
+BenchmarkCache/zipf_otter_reads=50%,writes=50%-8         	115512044	        10.07 ns/op	  99277547 ops/s
+BenchmarkCache/zipf_theine_reads=50%,writes=50%-8        	10183878	       113.2 ns/op	   8836873 ops/s
+BenchmarkCache/zipf_ristretto_reads=50%,writes=50%-8     	21318204	        61.53 ns/op	  16251964 ops/s
+BenchmarkCache/zipf_ccache_reads=50%,writes=50%-8        	 9242179	       127.9 ns/op	   7817867 ops/s
+BenchmarkCache/zipf_phuslu_reads=50%,writes=50%-8        	29831791	        40.12 ns/op	  24924272 ops/s
+BenchmarkCache/zipf_cloudxaas_reads=50%,writes=50%-8     	34331816	        37.28 ns/op	  26822534 ops/s
+BenchmarkCache/zipf_otter_reads=25%,writes=75%-8         	54098788	        21.67 ns/op	  46143889 ops/s
+BenchmarkCache/zipf_theine_reads=25%,writes=75%-8        	12745126	        93.07 ns/op	  10744497 ops/s
+BenchmarkCache/zipf_ristretto_reads=25%,writes=75%-8     	14803216	        85.35 ns/op	  11716276 ops/s
+BenchmarkCache/zipf_ccache_reads=25%,writes=75%-8        	 5966742	       196.9 ns/op	   5079416 ops/s
+BenchmarkCache/zipf_phuslu_reads=25%,writes=75%-8        	29290885	        40.79 ns/op	  24515454 ops/s
+BenchmarkCache/zipf_cloudxaas_reads=25%,writes=75%-8     	33247405	        41.65 ns/op	  24011821 ops/s
+BenchmarkCache/zipf_otter_reads=0%,writes=100%-8         	 2157975	       557.2 ns/op	   1794674 ops/s
+BenchmarkCache/zipf_theine_reads=0%,writes=100%-8        	16577847	        66.56 ns/op	  15023827 ops/s
+BenchmarkCache/zipf_ristretto_reads=0%,writes=100%-8     	 7368625	       159.3 ns/op	   6276734 ops/s
+BenchmarkCache/zipf_ccache_reads=0%,writes=100%-8        	  893979	      1455 ns/op	    687349 ops/s
+BenchmarkCache/zipf_phuslu_reads=0%,writes=100%-8        	29715964	        40.59 ns/op	  24635782 ops/s
+BenchmarkCache/zipf_cloudxaas_reads=0%,writes=100%-8     	26724966	        47.07 ns/op	  21245368 ops/s
 PASS
-ok  	github.com/maypok86/benchmarks/throughput	31.845s
+ok  	github.com/maypok86/benchmarks/throughput	45.782s
