@@ -8,6 +8,8 @@ caches=(
   "ristretto"
   "ccache"
   "hashicorp"
+  "cloudxaas"
+  "phuslu"
 )
 
 # capacity = 25000 used in caffeine benchmarks

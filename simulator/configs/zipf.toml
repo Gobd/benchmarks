@@ -6,7 +6,9 @@ caches = [
     "theine",
     "ristretto",
     "lru",
-    "arc"
+    "arc",
+    "phuslu",
+    "cloudxaas"
 ]
 limit = 1_000_000
 

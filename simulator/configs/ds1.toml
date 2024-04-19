@@ -6,7 +6,9 @@ caches = [
     "theine",
     "ristretto",
     "lru",
-    "arc"
+    "arc",
+    "phuslu",
+    "cloudxaas"
 ]
 
 [file]
