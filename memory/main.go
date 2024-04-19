@@ -10,10 +10,12 @@ import (
 	"time"
 
 	"github.com/Yiling-J/theine-go"
+	cloudxaas "github.com/cloudxaas/gocache/lru/bytes"
 	"github.com/dgraph-io/ristretto"
 	hashicorp "github.com/hashicorp/golang-lru/v2/expirable"
 	"github.com/karlseguin/ccache/v3"
 	"github.com/maypok86/otter"
+	phuslu "github.com/phuslu/lru"
 )
 
 var keys []string
@@ -50,6 +52,8 @@ func main() {
 		"theine":    newTheine,
 		"hashicorp": newHashicorp,
 		"ccache":    newCcache,
+		"cloudxaas": newCloudxaas,
+		"phuslu":    newPhuslu,
 	}[name]
 	if !ok {
 		log.Fatalf("not found cache %s\n", name)
@@ -65,11 +69,21 @@ func main() {
 	var m runtime.MemStats
 	runtime.ReadMemStats(&m)
 
+	alloc := m.Alloc - o.Alloc
+	if m.Alloc < o.Alloc {
+		alloc = 0
+	}
+
+	totalAlloc := m.TotalAlloc - o.TotalAlloc
+	if m.TotalAlloc < o.TotalAlloc {
+		totalAlloc = 0
+	}
+
 	fmt.Printf("%s\t%d\t%v MB\t%v MB\n",
 		name,
 		capacity,
-		toFixed(toMB(m.Alloc-o.Alloc), 2),
-		toFixed(toMB(m.TotalAlloc-o.TotalAlloc), 2),
+		toFixed(toMB(alloc), 2),
+		toFixed(toMB(totalAlloc), 2),
 	)
 }
 
@@ -120,5 +134,19 @@ func newHashicorp(capacity int) {
 	cache := hashicorp.NewLRU[string, string](capacity, nil, time.Hour)
 	for _, key := range keys {
 		cache.Add(key, key)
+	}
+}
+
+func newPhuslu(capacity int) {
+	cache := phuslu.NewLRUCache[string, string](capacity)
+	for _, key := range keys {
+		cache.Set(key, key)
+	}
+}
+
+func newCloudxaas(capacity int) {
+	cache := cloudxaas.NewShardedCache(128, int64(capacity), 10000)
+	for _, key := range keys {
+		cache.Put([]byte(key), []byte(key))
 	}
 }
